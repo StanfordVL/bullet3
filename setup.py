@@ -3,6 +3,7 @@ from sys import platform as _platform
 import sys
 import glob
 import os
+import pkg_resources
 
 from distutils.core import setup
 from distutils.extension import Extension
@@ -498,6 +499,13 @@ if 'BT_USE_EGL' in EGL_CXX_FLAGS:
       ])
 
   extensions.append(eglRender)
+
+# Check that a non-SVL pybullet is not installed
+try:
+  pkg_resources.get_distribution("pybullet")
+  raise ValueError("Please uninstall any other pybullet distributions from your environment prior to installing this fork.")
+except pkg_resources.DistributionNotFound:
+  pass
 
 setup(
     name='pybullet-svl',
