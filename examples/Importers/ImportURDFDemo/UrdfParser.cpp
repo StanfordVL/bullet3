@@ -1793,7 +1793,6 @@ bool UrdfParser::mergeFixedLinks(UrdfModel& model, UrdfLink* link, ErrorLogger* 
 	{
 		printf("\t");
 	}
-	printf("processing %s\n", link->m_name.c_str());
 	
 	for (int i = 0; i < link->m_childJoints.size();)
 	{
@@ -1806,7 +1805,6 @@ bool UrdfParser::mergeFixedLinks(UrdfModel& model, UrdfLink* link, ErrorLogger* 
 				printf("\t");
 			}
 			//mergeChildLink
-			printf("merge %s into %s!\n", childLink->m_name.c_str(), link->m_name.c_str());
 			for (int c = 0; c < childLink->m_collisionArray.size(); c++)
 			{
 				UrdfCollision col = childLink->m_collisionArray[c];
