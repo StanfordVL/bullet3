@@ -82,7 +82,8 @@ locomotion_gym_config.SimulationParameters.num_action_repeat = %NUM_ACTION_REPEA
 random_stepstone_scene.RandomStepstoneScene.random_seed = 13
 random_stepstone_scene.RandomStepstoneScene.gap_length_lower_bound = 0.07
 random_stepstone_scene.RandomStepstoneScene.gap_length_upper_bound = 0.15
-random_stepstone_scene.RandomStepstoneScene.stone_width = 0.6
+random_stepstone_scene.RandomStepstoneScene.stone_width_lower_bound = 0.6
+random_stepstone_scene.RandomStepstoneScene.stone_width_upper_bound = 0.6
 
 ########################################
 # Setup the task and terminal condition parameters
