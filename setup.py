@@ -509,7 +509,7 @@ except pkg_resources.DistributionNotFound:
 
 setup(
     name='pybullet-svl',
-    version='3.1.6.1',
+    version='3.1.6.2',
     description=
     "Python Interface for Stanford Vision and Learning Lab's fork of the Bullet Physics SDK specialized for Robotics Simulation and Reinforcement Learning",
     long_description=
