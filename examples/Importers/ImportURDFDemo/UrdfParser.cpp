@@ -1871,11 +1871,14 @@ bool UrdfParser::mergeFixedLinks(UrdfModel& model, UrdfLink* link, ErrorLogger* 
 			{
 				UrdfLink* grandChildLink = childLink->m_childLinks[g];
 				UrdfJoint* grandChildJoint = childLink->m_childJoints[g];
+
+				/* Disabled to avoid stdout noise.
 				for (int l = 0; l < level+2; l++)
 				{
 					printf("\t");
 				}
 				printf("relink %s from %s to %s!\n", grandChildLink->m_name.c_str(), childLink->m_name.c_str(), link->m_name.c_str());
+				*/
 				
 				grandChildJoint->m_parentLinkName = link->m_name;
 				grandChildJoint->m_parentLinkToJointTransform =
